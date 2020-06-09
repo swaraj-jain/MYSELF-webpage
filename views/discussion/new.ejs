@@ -1,0 +1,26 @@
+<%- include('../partials/header') -%>
+
+<div class="container" style="border-style:inset">
+    <div class="row">
+        <h1  style="text-align:center">Start your discussion!!</h1>
+        <div style="width: 50% ; margin:25px auto;">
+            <form action="/discussions" method="POST">
+                <div class="form-group">
+                    <label for="to" style="font-size: 22px;">Topic:</label>
+                    <input id="to" class="form-control" type="text" placeholder="Topic" name="topic" style="height: 48px;">
+                </div>
+                <div class="form-group">
+                    <label for="qu" style="font-size: 22px;">Question:</label>
+                    <textarea id="qu" class="form-control" name="question" rows="5" cols="70" ></textarea>
+                </div>
+                
+                <!-- <input class="form-control" type="text" placeholder="Question" name="question"> -->
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block btn-lg">Submit!!</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<%- include('../partials/footer') -%>

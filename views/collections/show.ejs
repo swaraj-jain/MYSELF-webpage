@@ -1,0 +1,15 @@
+<%- include('../partials/header') -%>
+    <ul>
+        <%currentUser.col.forEach(function(mycol){%>
+            <li><a href="<%= mycol.link %>"><%= mycol.qname %></a></li>
+            <li><%= mycol.rating%></li>
+            <li><%= mycol.platform%></li>
+            <li>
+                <form  action="/col/<%=mycol._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-xs btn-danger">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/col/new" ><h2 class="btn btn-large btn-danger ">Add more question</h2></a>
+<%- include('../partials/footer') -%>
