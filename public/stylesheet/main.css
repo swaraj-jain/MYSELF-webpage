@@ -185,3 +185,19 @@
 	font-size: 16px;
 	color: #474b4f;
 }
+.btn-yup{
+	background: #cf6679;
+	color: white;
+}
+#colsh{
+	background: #6b7b8c;
+}
+.btn-own{
+	background: #79a7d3;	
+}
+.btn-own:hover{
+	background:#6883bc;
+}
+a:hover{
+	text-decoration: none;
+}
