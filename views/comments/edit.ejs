@@ -1,10 +1,8 @@
-
-
-<%- include('../partials/header') -%>
+<%- include('../partials/header cd') -%>
 
 <div class="container">
-    <div class="row">
-        <h1  style="text-align:center">Edit Suggestion</h1>
+    <div class="row" style="margin-top: 120px; color: white;">
+        <p style="text-align:center; font-size: 40px;">Edit Suggestion</p>
         <div style="width: 50% ; margin:40px auto;">
             <form action="/discussions/<%= discussion_id %>/comments/<%= comment._id%>?_method=PUT" method="POST">
                 <div class="form-group">
@@ -20,4 +18,4 @@
 
     </div>
 </div>
-<%- include('../partials/footer') -%>
+<%- include('../partials/footer lr') -%>

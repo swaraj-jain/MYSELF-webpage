@@ -247,7 +247,7 @@ app.post("/register",function(req,res){
             return res.render("register");
         }
         passport.authenticate("local")(req,res,function(){
-            req.flash("success","Welcome to MYSELF "+user.username);
+            //req.flash("success","Welcome to MYSELF "+user.username);
             res.redirect("/");
         });
     });
@@ -269,7 +269,7 @@ app.post("/login",passport.authenticate("local",{
 //logout
 app.get("/logout",function(req,res){
     req.logOut();
-    req.flash("success","Logged you out!!")
+    //req.flash("success","Logged you out!!")
     res.redirect("/");
 });
 
