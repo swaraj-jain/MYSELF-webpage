@@ -388,40 +388,34 @@ function checkCommentOwnership(req,res,next){
 
 app.get("/materials",function(req,res){
 
-    console.log("request for champground page");
+    console.log("request for material page");
     res.render("material");
 });
 app.get("/materials/1",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material1");
 });
 app.get("/materials/2",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material2");
 });
 app.get("/materials/3",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material3");
 });
 app.get("/materials/4",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material4");
 });
 app.get("/materials/5",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material5");
 });
 app.get("/materials/6",function(req,res){
 
-    console.log("request for champground page");
     res.render("material/material6");
 });
 
 app.listen(3000,function(){
-    console.log("champ server has allready started!!");
+    console.log("MYSELF server has allready started!!");
 });
