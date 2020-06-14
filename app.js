@@ -12,9 +12,11 @@ var express      =require("express"),
     seedDB       =require("./seed");
 
 
+var url=process.env.DATABASEURL||"mongodb://localhost/myself_v6";
 //mongoose.connect("mongodb://localhost/myself_v6");
-mongoose.connect("mongodb+srv://myself:myself@cluster0-ebfxn.mongodb.net/<dbname>?retryWrites=true&w=majority")
-// mongodb+srv://myself:myself@cluster0-ebfxn.mongodb.net/<dbname>?retryWrites=true&w=majority
+mongoose.connect(url);
+
+
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
