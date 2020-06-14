@@ -12,7 +12,9 @@ var express      =require("express"),
     seedDB       =require("./seed");
 
 
-mongoose.connect("mongodb://localhost/myself_v6");
+//mongoose.connect("mongodb://localhost/myself_v6");
+mongoose.connect("mongodb+srv://myself:myself@cluster0-ebfxn.mongodb.net/<dbname>?retryWrites=true&w=majority")
+// mongodb+srv://myself:myself@cluster0-ebfxn.mongodb.net/<dbname>?retryWrites=true&w=majority
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
@@ -416,6 +418,6 @@ app.get("/materials/6",function(req,res){
     res.render("material/material6");
 });
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("MYSELF server has allready started!!");
 });
